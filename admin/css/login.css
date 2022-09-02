@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+   background-color: #2980b9;
+}
+.main{
+    height: 550px;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+
+}
+.main-photo{
+    width: 60%;
+    height:550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right:2px;
+    border-right-style: solid;
+    border-right-color: white;
+}
+.main-photo img{
+    height: 500px;
+    width: 500px;
+}
+.info{
+    width: 39%;
+    height: 550px;
+}
+.form{
+    height: 500px;
+    width: 100%;
+    margin-top:10px;
+}
+.form form{
+    padding: 10px 10px;
+    margin-bottom: 60px;
+}
+.form form input{
+    width: 50%;
+    height: 40px;
+    margin: 10px 30px;
+}
+.info h2{
+    margin-left: 40px;
+    margin-top: 20px;
+    color:white;
+    letter-spacing:1px;
+    text-transform: capitalize;
+}
+.png img{
+    height: 100px;
+    width: 100px;
+    margin-left: 90px;
+}
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin-bottom: 50px;
+    margin-left: 40px;
+}
+.contact a{
+    padding: 5px 0px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+.form form [type=text],[type=password]{
+    border-radius: .5rem;
+    padding: 0 10px;
+}
+.form form [type=submit]{
+    color:white;
+    text-transform:uppercase;
+    font-weight: bold;
+    background-color: #85c1e9 ;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.form form [type=submit]:hover{
+    background-color: lightgray;
+}
+@media (max-width:1080px) {
+    .main{
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+    .main-photo{
+        width: 100%;
+        border: none;
+    }
+    .info{
+        width: 100%;
+    }
+    .png{
+        text-align: center;
+        padding-right: 100px;
+    }
+    .info h2,.form{
+        text-align: center;
+    }
+    .contact{
+        text-align: center;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    
+}
+@media (max-width:667px){
+    .main-photo img{
+        width: 300px;
+        height: 300px;
+    }
+    .contact{
+        width: 70%;
+    }
+}

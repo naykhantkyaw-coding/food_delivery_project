@@ -1,0 +1,243 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+:root{
+    --blue:#2980b9;
+    --red:tomato;
+    --orange:orange;
+    --black:#333;
+    --bgcolor:#eee;
+    --border:1rem solid #999;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+section{
+    padding: 2rem;
+}
+.add-product-form{
+    max-width: 50rem;
+    background-color: var(--bgcolor);
+    border-radius: .5rem;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+.add-product-form h3{
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: var(--black);
+}
+.add-product-form .box{
+    text-transform: none;
+    padding: 1.2rem 1.5rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    background-color: white;
+    border: none;
+    margin: 1rem 0;
+    width: 100%;
+}
+.btu-add,.option-btn,.delete-btn{
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: var(--blue);
+    color: white;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    border: none;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+.btu-add:hover,.option-btn:hover,.delete-btn:hover{
+    background-color: var(--black);
+}
+.option-btn i,.delete-btn i{
+    padding-right: 1rem;
+}
+.delete-btn{
+    margin: 0;
+    background-color: var(--red);
+}
+.option-btn{
+    background-color: var(--orange);
+}
+/* header */
+.show-message{
+    border: 1px solid red;
+    height: 100px;
+    width: 100px;
+}
+.message{
+    background-color: var(--blue);
+    position: sticky;
+    top: 0;left: 0;
+    z-index: 1000;
+    border-radius: .5rem;
+    background-color:white;
+    padding: 1.5rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.message span{
+    font-size: 1.7rem;
+    color: black;
+}
+.message i{
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+}
+.message i:hover{
+    color: var(--red);
+}
+.header{
+    background-color: var(--blue);
+    position: sticky;
+    top: 0;left: 0;
+    z-index: 1000;
+}
+.header .flex{
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header .flex .logo{
+    margin-right: auto;
+    padding-left:30px;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.header .flex .navbar a{
+    border: 2px solid transparent;
+    padding: 7px 20px;
+    border-radius: 5px;
+    margin-left: 3rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.header .flex .navbar a:hover{
+    color: white;
+    background-color: var(--black);
+    border:2px solid var(--black);
+}
+#menu-bar{
+    margin-left: 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+.product-dispaly table{
+    width: 100%;
+    text-align: center;
+}
+.product-dispaly table thead th{
+    padding: 1.5rem;
+    font-size: 1.7rem;
+    background-color: var(--black);
+    color: white;
+    text-transform: capitalize;
+}
+.product-dispaly table td{
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    color: var(--black);
+}
+.product-dispaly table td:first-child{
+    padding: 0;
+}
+.product-dispaly table tr:nth-child(even){
+    background-color: var(--bgcolor);
+}
+ .edit-form form{
+    position: fixed;
+    top: 20%; left: 0;
+    z-index: 1100;
+    width: 50rem;
+    border-radius: .5rem;
+    background-color:beige;
+    text-align: center;
+    padding: 2rem;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 1px 3px 3px 10px rgba(0, 0, 0, 0.623);
+}
+.edit-form form .box{
+    width: 100%;
+    background-color: var(--bgcolor);
+    border-radius: .5rem;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: black;
+    border: none;
+    padding: 1.2rem 1.4rem;
+    text-transform: none;
+} 
+/* media */
+@media (max-width:991px) {
+    html{
+        font-size: 55%;
+    }
+    
+}
+
+@media (max-width:768px){
+    #menu-bar{
+        display: inline-block;
+        transition: .2s linear;
+    }
+    #menu-bar.fa-times{
+        transform: rotate(180deg);
+    }
+    .header .flex .navbar{
+        position: absolute;
+        top: 99%;left: 0; right: 0;
+        background-color: var(--blue);
+        clip-path: polygon(0 0,100% 0,100% 0,0 0); 
+    }
+    .header .flex .navbar.active{
+        clip-path: polygon(0 0,100% 0,100% 100%,0% 100%);
+    }
+    .header .flex .navbar a{
+        margin: 2rem;
+        display: block;
+        text-align: center;
+    }
+    .product-dispaly{
+        overflow-x: scroll;
+    }
+    .product-dispaly table{
+        width: 70rem;
+    }
+    
+}
+
+@media (max-width:450px) {
+    html{
+        font-size: 50%;
+    }
+    
+}

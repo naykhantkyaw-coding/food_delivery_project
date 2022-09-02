@@ -1,0 +1,66 @@
+.title{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: tomato;
+    text-align: center;
+}
+.user_container{
+    margin-top: 10px;
+    height:fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.user_table{
+    height: fit-content;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.user_table table{
+    width: 100%;
+    text-align: center;
+}
+.user_table table thead th{
+    padding: 1.5rem;
+    font-size: 1.7rem;
+    background-color: var(--black);
+    color: white;
+    text-transform: capitalize;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+.user_table table td{
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    color: var(--black);
+}
+.user_table table td:first-child{
+    padding: 0;
+}
+.user_table table tr:nth-child(even){
+    background-color: var(--bgcolor);
+}
+.done-btn{
+    background-color: tomato;
+    color:white;
+    padding: .5rem 3rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+}
+.done-btn:hover{
+    background-color: #2980b9;
+}
+@media (max-width:768px) {
+    .user_table{
+        overflow-x: scroll;
+    }
+    
+}
